@@ -1,0 +1,77 @@
+.background-image {
+  background-image: url(images/a.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.logo {
+  width: 200px;
+  justify-content: space-between;
+  height: 200px;
+}
+.score-item {
+  font-size: 3rem;
+  color: white;
+}
+
+.button-option {
+  width: 2rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  border: 2px solid rgb(6, 53, 26);
+  border-radius: 5px;
+}
+.button-option:hover {
+  background-color: rgb(10, 82, 41);
+  color: white;
+  border: 2px white solid;
+}
+.logo-btn {
+  width: 10rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: 2px solid rgb(6, 53, 26);
+  border-radius: 5px;
+}
+.logo-btn:hover {
+  background-color: rgb(10, 82, 41);
+  color: white;
+  border: 2px white solid;
+}
+.logo-btn2 {
+    width: 6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid rgb(6, 53, 26);
+    border-radius: 5px;
+}
+.logo-btn2:hover {
+    background-color: rgb(10, 82, 41);
+    color: white;
+    border: 2px white solid;
+  }
+
+
+.modal-header {
+  background: linear-gradient(
+    27deg,
+    rgba(6, 37, 8, 1) 0%,
+    rgba(15, 152, 74, 1) 51%,
+    rgba(62, 230, 144, 1) 95%
+  );
+}
+table, th,td{
+    border: 2px solid white;
+}
+
+td{
+    padding: 1rem;
+}
+th{
+    padding: 0 3rem;
+    text-align: center;
+}
+audio{
+    display: none;
+}

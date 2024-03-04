@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section
+      class="background-image d-flex justify-content-center align-items-center"
+    >
+      <div class="container position-relative">
+      
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1
+                  class="modal-title fs-5 ms-auto modal-heading text-white"
+                  id="staticBackdropLabel"
+                >
+                  Maç İstatiği
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body modal-body">
+                <div class="row justify-content-center">
+                  <div class="col-12">
+                    <table class="statistics mx-auto">
+                      <tr>
+                        <td>7</td>
+                        <th>Gol Girişimi</th>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <th>İsabetli Şut</th>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <th>İsabetsiz Şut</th>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <th>Köşe Vuruşları</th>
+                        <td>10</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-5">
+            <div class="text-center text-white">
+              <h1 id="firstTeamName" class="mb-4">Galatasaray</h1>
+              <img
+                id="logoTeamA"
+                class="img-fluid logo"
+                src="images/galatasaray.png"
+              /><br /><br />
+              <button
+                onclick="increaseScoreA()"
+                class="button-option me-sm-0 me-lg-2"
+              >
+                +
+              </button>
+              <button onclick="decreaseScoreA()" class="button-option">
+                -
+              </button>
+              <br /><br />
+              <button onclick="teamNameA()" class="logo-btn">Change Name</button
+              ><br /><br />
+              <button onclick="updateScoreA()" class="logo-btn">
+                Change Score</button
+              ><br /><br />
+              <button onclick="teamLogoA()" class="logo-btn">
+                Change logo
+              </button>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="d-flex ">
+              <p id="firstTeamScore" class="score-item me-lg-4">0</p>
+              <p class="score-item mx-lg-4">-</p>
+              <p id="secondTeamScore" class="score-item ms-lg-4">0</p>
+            </div>
+            <div class="">
+              <h5 class="fw-bold mb-4 me-md-4 text-center" style="color: black">
+                Maç İstatistikleri
+              </h5>
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                class="logo-btn"
+              >
+                İstatistikler</button
+              ><br /><br />
+              <button onclick="musicStart()" class="logo-btn">Kazanan</button>
+              <audio id="teamMusicA" controls>
+                <source
+                  src="sounds/galatasaray.mp3"
+                  type="audio/mp3"
+                />
+              </audio>
+              <audio id="teamMusicB" controls>
+                <source
+                  src="sounds/Kıraç - 100. Yıl Şarkısı (Official Video).mp3"
+                  type="audio/mp3"
+                />
+              </audio>
+              <audio id="teamMusic0" controls>
+                <source
+                  src="sounds/gameover.mp3"
+                  type="audio/mp3"
+                />
+              </audio>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="text-center text-white">
+              <h1 id="secondTeamName" class="mb-4">Fenerbahçe</h1>
+              <img
+                id="logoTeamB"
+                class="img-fluid logo"
+                src="images/fenerbahce.png"
+              /><br /><br />
+              <button
+                onclick="increaseScoreB()"
+                class="button-option me-sm-0 me-lg-2"
+              >
+                +
+              </button>
+              <button onclick="decreaseScoreB()" class="button-option">-</button
+              ><br /><br />
+              <button onclick="teamNameB()" class="logo-btn">Change Name</button
+              ><br /><br />
+              <button onclick="updateScoreB()" class="logo-btn">
+                Change Score</button
+              ><br /><br />
+              <button onclick="teamLogoB()" class="logo-btn">
+                Change logo
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
